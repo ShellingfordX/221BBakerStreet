@@ -12,7 +12,7 @@ fi
   
 
 # git、shutter のインストール
-sudo apt install -y git gnome-web-photo libgoo-canvas-perl libimage-exiftool-perl libgtk2-appindicator-perl
+sudo apt install -y git shutter gnome-web-photo libgoo-canvas-perl libimage-exiftool-perl libgtk2-appindicator-perl
 
 # Peek のインストール
 sudo add-apt-repository ppa:peek-developers/stable -y && sudo apt update && sudo apt install -y peek
