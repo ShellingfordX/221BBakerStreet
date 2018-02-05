@@ -19,3 +19,6 @@ sudo add-apt-repository ppa:peek-developers/stable -y && sudo apt update && sudo
 
 # プロファイルのアイコン取得
 cd && wget -O .face https://farm5.staticflickr.com/4620/40030405722_60edd303e1_o.png
+
+# 壁紙
+wget -O ~/ピクチャ/wallpaper.jpg https://raw.githubusercontent.com/ShellingfordX/221BBakerStreet/master/assets/images/DOA5LR-Shot-01.jpg
