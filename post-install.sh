@@ -17,8 +17,26 @@ sudo apt install -y git shutter gnome-web-photo libgoo-canvas-perl libimage-exif
 # Peek のインストール
 sudo add-apt-repository ppa:peek-developers/stable -y && sudo apt update && sudo apt install -y peek
 
+# Google Chrome のインストール
+sudo echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/chrome.list
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+sudo apt update
+sudo apt install -y google-chrome-stable
+
+# Ruby のインストール
+sudo apt install -y ruby ruby-dev irb ri rubygems
+
+# Python IDLE3 のインストール
+sudo apt install -y idle3
+
 # プロファイルのアイコン取得
 cd && wget -O .face https://farm5.staticflickr.com/4620/40030405722_60edd303e1_o.png
 
 # 壁紙
 wget -O ~/ピクチャ/wallpaper.jpg https://raw.githubusercontent.com/ShellingfordX/221BBakerStreet/master/assets/images/DOA5LR-Shot-01.jpg
+
+# Download O Captain Icon set with Firefox
+firefox https://drive.google.com/file/d/0ByQnaVw7riBQSUlwMThLTDdxZ00/view
+
+# Things to do manually
+echo "壁紙を変更してください\nアイコンを変更してください\nテーマを変更してください"
