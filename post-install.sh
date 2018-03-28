@@ -35,8 +35,8 @@ cd && wget -O .face https://farm5.staticflickr.com/4620/40030405722_60edd303e1_o
 # 壁紙
 wget -O ~/ピクチャ/wallpaper.jpg https://raw.githubusercontent.com/ShellingfordX/221BBakerStreet/master/assets/images/DOA5LR-Shot-01.jpg
 
-# Download O Captain Icon set with Firefox
-firefox https://drive.google.com/file/d/0ByQnaVw7riBQSUlwMThLTDdxZ00/view
+# Download O Captain Icon set and MEGA with Firefox
+firefox -new-tab -url https://drive.google.com/file/d/0ByQnaVw7riBQSUlwMThLTDdxZ00/view -new-tab -url https://mega.nz/sync!linux
 
 # Things to do manually
 echo "壁紙を変更してください\nアイコンを変更してください\nテーマを変更してください"
