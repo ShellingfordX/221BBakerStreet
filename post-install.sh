@@ -17,6 +17,22 @@ if [[ $os == "LinuxMint" ]]
   exit 1
 fi
   
+# 古い壁紙ゲット
+sudo apt install -y mint-backgrounds-* ubuntu-wallpapers-* ubuntustudio-wallpapers xubuntu-community-wallpapers-xenial
+
+# 日本語のあれこれ
+sudo apt install -y language-pack-ja language-pack-gnome-ja fonts-takao-gothic fonts-takao-mincho fonts-takao-pgothic fonts-vlgothic fonts-ipafont-gothic fonts-ipafont-mincho libreoffice-l10n-ja libreoffice-help-ja firefox-locale-ja manpages-ja thunderbird-locale-ja ibus-mozc ibus-anthy kasumi ibus-gtk ibus-gtk3 poppler-data cmap-adobe-japan1 fcitx-mozc fcitx-anthy fcitx-frontend-qt5 fcitx-config-gtk fcitx-config-gtk2 fcitx-frontend-gtk2 fcitx-frontend-gtk3 mozc-utils-gui fcitx-frontend-qt4 fcitx-frontend-qt5 libfcitx-qt0 libfcitx-qt5-1 fonts-migmix fonts-ipamj-mincho fonts-horai-umefont fonts-takao xfonts-mona fonts-kouzan-mouhitsu fonts-konatsu
+# コーデック類
+sudo apt install -y mint-meta-codecs ubuntu-restricted-extras libavcodec-extra libdvd-pkg
+
+# GTX 1060 のドライバーをインストール
+sudo add-apt-repository ppa:graphics-drivers/ppa -y && sudo apt-get install -y nvidia-settings nvidia-390
+
+# Java のインストール
+sudo add-apt-repository ppa:linuxuprising/java -y && sudo apt update && sudo apt install oracle-java10-installer -y
+
+# 書庫
+sudo apt install -y unace p7zip-rar sharutils rar arj lunzip lzip
 
 # git、shutter のインストール
 sudo apt install -y git shutter　#gnome-web-photo libgoo-canvas-perl libimage-exiftool-perl libgtk2-appindicator-perl
@@ -44,6 +60,9 @@ wget -O ~/ピクチャ/wallpaper.jpg https://raw.githubusercontent.com/Shellingf
 
 # Download O Captain Icon set and MEGA with Firefox
 firefox -new-tab -url https://drive.google.com/file/d/0ByQnaVw7riBQSUlwMThLTDdxZ00/view -new-tab -url https://mega.nz/sync!linux
+
+# 掃除
+sudo apt-get autoremove
 
 # Things to do manually
 echo "壁紙を変更してください\nアイコンを変更してください\nテーマを変更してください"
