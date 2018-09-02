@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# root 権限で実行されているか確認
+if [[ $EUID -ne 0 ]]; then
+echo "You must run the script as root or using sudo"
+   exit 1
+fi
+
 # Linux Mint かどうか確認
 os=$(cat /etc/issue | grep '\n' | awk '{print $1,$2}')
 if [[ $os == "Linux Mint" ]]
@@ -7,12 +13,12 @@ if [[ $os == "Linux Mint" ]]
   echo "Linux Mint を確認しました。"
   else
   echo "Linux Mint を確認できませんでした。スクリプトを終了します。。。"
-  exit
+  exit 1
 fi
   
 
 # git、shutter のインストール
-sudo apt install -y git shutter gnome-web-photo libgoo-canvas-perl libimage-exiftool-perl libgtk2-appindicator-perl
+sudo apt install -y git shutter　#gnome-web-photo libgoo-canvas-perl libimage-exiftool-perl libgtk2-appindicator-perl
 
 # Peek のインストール
 sudo add-apt-repository ppa:peek-developers/stable -y && sudo apt update && sudo apt install -y peek
@@ -30,7 +36,7 @@ sudo apt install -y ruby ruby-dev irb ri rubygems
 sudo apt install -y idle3
 
 # プロファイルのアイコン取得
-cd && wget -O .face https://farm5.staticflickr.com/4620/40030405722_60edd303e1_o.png
+cd && wget -O ~/.face https://farm5.staticflickr.com/4620/40030405722_60edd303e1_o.png
 
 # 壁紙
 wget -O ~/ピクチャ/wallpaper.jpg https://raw.githubusercontent.com/ShellingfordX/221BBakerStreet/master/assets/images/DOA5LR-Shot-01.jpg
