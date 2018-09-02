@@ -9,6 +9,7 @@ fi
 # Linux Mint かどうか確認
 os=$(lsb_release -si)
 ver=$(lsb_release -sr)
+de=$XDG_CURRENT_DESKTOP
 if [[ $os == "LinuxMint" ]]
   then
   echo "Linux Mint を確認しました。"
@@ -57,6 +58,10 @@ cd && wget -O ~/.face https://farm5.staticflickr.com/4620/40030405722_60edd303e1
 
 # 壁紙
 wget -O ~/ピクチャ/wallpaper.jpg https://raw.githubusercontent.com/ShellingfordX/221BBakerStreet/master/assets/images/DOA5LR-Shot-01.jpg
+if [[ de == "X-Cinnamon" ]]
+   then
+   gsettings set org.cinnamon.desktop.background picture-uri 'file:///$HOME/ピクチャ/wallpaper.jpg'
+fi
 
 # 掃除
 sudo apt-get autoremove
