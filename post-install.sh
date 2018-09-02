@@ -7,8 +7,9 @@ echo "You must run the script as root or using sudo"
 fi
 
 # Linux Mint かどうか確認
-os=$(cat /etc/issue | grep '\n' | awk '{print $1,$2}')
-if [[ $os == "Linux Mint" ]]
+os=$(lsb_release -si)
+ver=$(lsb_release -sr)
+if [[ $os == "LinuxMint" ]]
   then
   echo "Linux Mint を確認しました。"
   else
