@@ -41,6 +41,9 @@ sudo apt install -y git shutter　#gnome-web-photo libgoo-canvas-perl libimage-e
 # Peek のインストール
 sudo add-apt-repository ppa:peek-developers/stable -y && sudo apt update && sudo apt install -y peek
 
+# Numix アイコンとテーマ
+sudo add-apt-repository ppa:numix/ppa -y && sudo apt update && sudo apt install -y numix-gtk-theme numix-icon-theme-circle
+
 # Google Chrome のインストール
 sudo echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/chrome.list
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
