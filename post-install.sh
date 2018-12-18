@@ -27,13 +27,13 @@ sudo apt install -y language-pack-ja language-pack-gnome-ja fonts-takao-gothic f
 sudo apt install -y mint-meta-codecs ubuntu-restricted-extras libavcodec-extra libdvd-pkg
 
 # GTX 1060 のドライバーをインストール
-sudo add-apt-repository ppa:graphics-drivers/ppa -y && sudo apt-get install -y nvidia-settings nvidia-410
+sudo add-apt-repository ppa:graphics-drivers/ppa -y && sudo apt-get install -y nvidia-settings nvidia-415
 
 # Java のインストール
 sudo add-apt-repository ppa:linuxuprising/java -y && sudo apt update && sudo apt install oracle-java11-installer -y
 
 # 書庫
-sudo apt install -y unace p7zip-rar sharutils rar arj lunzip lzip
+sudo apt install -y unace p7zip-rar sharutils rar arj lunzip lzip unar
 
 # git、shutter のインストール
 sudo apt install -y git shutter　#gnome-web-photo libgoo-canvas-perl libimage-exiftool-perl libgtk2-appindicator-perl
@@ -55,6 +55,9 @@ sudo apt install -y ruby ruby-dev irb ri rubygems
 
 # Python IDLE3 のインストール
 sudo apt install -y idle3
+
+#youtube-dl
+sudo apt install -y youtube-dl
 
 # プロファイルのアイコン取得
 cd && wget -O ~/.face https://farm5.staticflickr.com/4620/40030405722_60edd303e1_o.png
