@@ -27,7 +27,7 @@ sudo apt install -y language-pack-ja language-pack-gnome-ja fonts-takao-gothic f
 sudo apt install -y mint-meta-codecs ubuntu-restricted-extras libavcodec-extra libdvd-pkg
 
 # GTX 1060 のドライバーをインストール
-sudo add-apt-repository ppa:graphics-drivers/ppa -y && sudo apt-get install -y nvidia-settings nvidia-415
+sudo add-apt-repository ppa:graphics-drivers/ppa -y && sudo apt-get install -y nvidia-settings nvidia-410
 
 # Java のインストール
 sudo add-apt-repository ppa:linuxuprising/java -y && sudo apt update && sudo apt install oracle-java11-installer -y
