@@ -38,6 +38,9 @@ sudo apt install -y unace p7zip-rar sharutils rar arj lunzip lzip unar
 # git、shotwell、shutter のインストール
 sudo apt install -y git shotwell shutter　#gnome-web-photo libgoo-canvas-perl libimage-exiftool-perl libgtk2-appindicator-perl
 
+# gtkHash のインストール
+sudo apt install -y gtkhash
+
 # Peek のインストール
 sudo add-apt-repository ppa:peek-developers/stable -y && sudo apt update && sudo apt install -y peek
 
@@ -60,7 +63,7 @@ sudo apt install -y idle3
 sudo apt install -y youtube-dl
 
 # プロファイルのアイコン取得
-cd && wget -O ~/.face https://farm5.staticflickr.com/4620/40030405722_60edd303e1_o.png
+cd && wget -O ~/.face https://i.imgur.com/LbHPRr9.png
 
 # 壁紙
 wget -O ~/ピクチャ/wallpaper.jpg https://raw.githubusercontent.com/ShellingfordX/221BBakerStreet/master/assets/images/DOA5LR-Shot-01.jpg
