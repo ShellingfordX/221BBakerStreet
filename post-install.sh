@@ -27,7 +27,7 @@ sudo apt install -y language-pack-ja language-pack-gnome-ja fonts-takao-gothic f
 sudo apt install -y mint-meta-codecs ubuntu-restricted-extras libavcodec-extra libdvd-pkg
 
 # GTX 1060 のドライバーをインストール
-sudo add-apt-repository ppa:graphics-drivers/ppa -y && sudo apt-get install -y nvidia-settings nvidia-410
+sudo add-apt-repository ppa:graphics-drivers/ppa -y && sudo apt update && sudo apt-get install -y nvidia-settings nvidia-410
 
 # Java のインストール
 sudo add-apt-repository ppa:linuxuprising/java -y && sudo apt update && sudo apt install oracle-java11-installer -y
@@ -35,8 +35,8 @@ sudo add-apt-repository ppa:linuxuprising/java -y && sudo apt update && sudo apt
 # 書庫
 sudo apt install -y unace p7zip-rar sharutils rar arj lunzip lzip unar
 
-# git、shutter のインストール
-sudo apt install -y git shutter　#gnome-web-photo libgoo-canvas-perl libimage-exiftool-perl libgtk2-appindicator-perl
+# git、shotwell、shutter のインストール
+sudo apt install -y git shotwell shutter　#gnome-web-photo libgoo-canvas-perl libimage-exiftool-perl libgtk2-appindicator-perl
 
 # Peek のインストール
 sudo add-apt-repository ppa:peek-developers/stable -y && sudo apt update && sudo apt install -y peek
@@ -45,7 +45,7 @@ sudo add-apt-repository ppa:peek-developers/stable -y && sudo apt update && sudo
 sudo add-apt-repository ppa:numix/ppa -y && sudo apt update && sudo apt install -y numix-gtk-theme numix-icon-theme-circle
 
 # Google Chrome のインストール
-sudo echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/chrome.list
+sudo echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 sudo apt update
 sudo apt install -y google-chrome-stable
@@ -70,7 +70,7 @@ if [[ de == "X-Cinnamon" ]]
 fi
 
 # 掃除
-sudo apt-get autoremove
+sudo apt autoremove
 
 # Things to do manually
 echo "壁紙を変更してください\nアイコンを変更してください\nテーマを変更してください"
