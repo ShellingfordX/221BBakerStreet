@@ -67,10 +67,9 @@ cd && wget -O ~/.face https://i.imgur.com/LbHPRr9.png
 
 # 壁紙
 wget -O ~/ピクチャ/wallpaper.jpg https://raw.githubusercontent.com/ShellingfordX/221BBakerStreet/master/assets/images/DOA5LR-Shot-01.jpg
-if [[ de == "X-Cinnamon" ]]
-   then
-   gsettings set org.cinnamon.desktop.background picture-uri 'file:///$HOME/ピクチャ/wallpaper.jpg'
-fi
+
+# アイコン
+wget https://github.com/ShellingfordX/221BBakerStreet/blob/master/post-install/macOS.tar.xz
 
 # 掃除
 sudo apt autoremove
