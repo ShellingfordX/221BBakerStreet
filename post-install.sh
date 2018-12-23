@@ -71,6 +71,9 @@ wget -O ~/ピクチャ/wallpaper.jpg https://raw.githubusercontent.com/Shellingf
 # アイコン
 wget https://github.com/ShellingfordX/221BBakerStreet/blob/master/post-install/macOS.tar.xz
 
+# Cinnamon
+gsettings set org.cinnamon.theme name "Mint-Y-Dark"
+
 # 掃除
 sudo apt autoremove
 
