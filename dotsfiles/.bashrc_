@@ -17,28 +17,28 @@
 #      `echo ". .bashrc" >> ~/.bash_profile`		
 # 4. Run either `. .bashrc` or restart the shell to see changes
 
-# Command Reference:
-# up <number> - Goes up a certain amount of directories
-# extract <file> - Attempts to extract the file
-# ff <string> - Finds a file by it's name
-# maketar <dir> - Creates an archive (*.tar.gz) from given directory
-# makezip <dir/file> - Creates a ZIP archive from a file or folder
-# sanitize <dir/file> - Gives sane permissions to a file or folder
-# my_ps - Lists your processes
-# killps - Kills a process by name
-# get_ip - Gets your current IP address
-# host_information - Lists information about your host
-# repeat <number> <command> - Repeats a command 'n' times
-# ask - Prmopts the user whether to continue
+# コマンドリファレンス:
+# up <number> - 指定した数の分親ディレクトリに上がる
+# extract <file> - ファイルを展開する
+# ff <string> - 名前からファイルを検索する
+# maketar <dir> - 指定のディレクトリからアーカイヴ(*.tar.gz)を作成する
+# makezip <dir/file> - ファイル/フォルダーから zip を作成する
+# sanitize <dir/file> - ファイル/フォルダーに SANE パーミッションを与える
+# my_ps - プロセスをリストする
+# killps - 名前でプロセスを kill する
+# get_ip - 現在の IP アドレスを表示する
+# host_information - ホストに関する情報を表示する
+# repeat <number> <command> - <number>で指定した回数だけ<command>を実行する
+# ask - ユーザーに続行するか尋ねる
 # corename <file> - Get which process created a corefile
-# edit <file> - Edit a file as your current user
-# sedit <file> - Edit a file as root
-# ftext <file> - Search for text in all files in the current folder
-# cpp <file> - Copy a file with a progress bar
-# cpg <src dir> <dest dir> - Copy and go to a directory
-# mvg <src dir> <dest dir> - Move and go to a directory
-# mkdirg <dir> - Make and go to a directory
-# update_bashrc - Update this ~/.bashrc (loses existing settings and edits)
+# edit <file> - 現在のユーザーとしてファイルを編集する
+# sedit <file> - root としてファイルを編集する
+# ftext <file> - 現在のフォルダーのすべてのテキストファイルから文字を検索する
+# cpp <file> - プログレスバーを表示しながらファイルをコピーする
+# cpg <src dir> <dest dir> - ディレクトリをコピーしコピー先に移る
+# mvg <src dir> <dest dir> - ディレクトリを移動し移動先に移る
+# mkdirg <dir> - ディレクトリを作成し作成先に移る
+# update_bashrc - ~/.bashrc を更新 (前の設定は消えます)
 
 # Custom Aliases:
 # h - Search command line history
@@ -85,7 +85,7 @@
 # trim (stream) - Removes leading and trailing whitespace
 
 ##############################################################################
-#                               User Settings                                #
+#                                ユーザー設定                                 #
 ##############################################################################
 
 # default - user@server ~/dir :) >
