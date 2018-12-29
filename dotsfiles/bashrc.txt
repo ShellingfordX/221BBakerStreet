@@ -2,28 +2,24 @@
 #                         Codefined's ~/.bashrc File                         #
 ##############################################################################
 
-# A compiled list of commands to aid with everyday usage of bash.  Borrowed
-# from many sources, including:
+# Bash の作業を少し楽にするコマンドのリストです。知恵を以下のソースからいただきました:
 #   http://www.tldp.org/LDP/abs/html/sample-bashrc.html
 #   http://ubuntuforums.org/showthread.php?t=679762
 #   http://tinyurl.com/ultimate-bashrc-file
-# This file couldn't be accomplished without the help of many people, to all of
-# whom I give thanks.
+# このファイルは多くの人の助けなしでは完成しなかったでしょう。
 
-# Installation Instructions:
-# 1. Download this file `wget codefined.xyz/bashrc/bashrc.txt`
-# 2. Merge/replace your bashrc file `mv bashrc.txt ~/.bashrc`
-# 3. Add `. .bashrc` to your bash_profile file		
-#      `echo ". .bashrc" >> ~/.bash_profile`		
-# 4. Run either `. .bashrc` or restart the shell to see changes
+# このファイルを利用するには:
+# 1. このファイルをダウンロードしま: wget https://github.com/ShellingfordX/221BBakerStreet/edit/master/dotsfiles/bashrc.txt
+# 2. 自分の .bashrc と結合します: cd; mv .bashrc .bashrc.old; cat .bash.old bashrc.txt > .bashrc
+# 3. 次のコマンドを実行します: . .bashrc
 
 # コマンドリファレンス:
-# up <number> - 指定した数の分親ディレクトリに上がる
+# up <number> - 指定した数の分、親ディレクトリに上がる
 # extract <file> - ファイルを展開する
-# ff <string> - 名前からファイルを検索する
-# maketar <dir> - 指定のディレクトリからアーカイヴ(*.tar.gz)を作成する
-# makezip <dir/file> - ファイル/フォルダーから zip を作成する
-# sanitize <dir/file> - ファイル/フォルダーに SANE パーミッションを与える
+# ff <string> - ワーキングディレクトから名前でファイルを検索する
+# maketar <dir> - 指定のディレクトリのアーカイヴ(*.tar.gz)を作成する
+# makezip <dir/file> - 指定のファイル/フォルダーの zip を作成する
+# sanitize <dir/file> - してのファイル/フォルダーに SANE パーミッションを与える
 # my_ps - プロセスをリストする
 # killps - 名前でプロセスを kill する
 # get_ip - 現在の IP アドレスを表示する
@@ -41,8 +37,8 @@
 # update_bashrc - ~/.bashrc を更新 (前の設定は消えます)
 
 # Custom Aliases:
-# h - Search command line history
-# p/topcpu - Search running processes
+# h - コマンドの履歴を検索する
+# p/topcpu - 実行中のプロセスを検索する
 # f - Find files in current folder
 # countfiles - Count files in current folder
 # ipview - Show current network connections
@@ -144,7 +140,7 @@ export VISUAL=nano
 
 
 ##############################################################################
-#                          Command History Settings                          #
+#                              コマンド履歴の設定                              #
 ##############################################################################
 
 # Ignore empty and duplicate history items
@@ -167,7 +163,7 @@ export HISTTIMEFORMAT="[%Y-%m-%d %T] "
 export HISTIGNORE="&:ls:[bf]g:exit"
 
 ##############################################################################
-#                             Colour Variables                               #
+#                                  色の変数                                   #
 ##############################################################################
 
 if [ "$enable_colours" == true ] ; then
@@ -215,7 +211,7 @@ if [ "$enable_colours" == true ] ; then
 fi
 
 ##############################################################################
-#                           Fancy Terminal Prompt                            #
+#                             魅力的なプロンプト                               #
 ##############################################################################
 
 if [ "$enable_fancy_terminal" == true ] ; then
@@ -266,7 +262,7 @@ alias web='cd /var/www/html'
 # sudo umount /home/<iso>.iso
 
 ##############################################################################
-#                               Command Aliases                              #
+#                              コマンドのエイリアス                            #
 ##############################################################################
 
 # You can temporarily disable these by adding a "\" before the alias you wish
@@ -448,7 +444,7 @@ if [ "$enable_aliases" == true ] ; then
 fi
 
 ##############################################################################
-#                         Run Commands in Background                         #
+#                        バックグラウンドでコマンドを実行                       #
 ##############################################################################
 
 if [ "$enable_background_commands" == true ] ; then
@@ -458,7 +454,7 @@ if [ "$enable_background_commands" == true ] ; then
 fi
 
 ##############################################################################
-#                           Custom Utility Commands                          #
+#                             便利なカスタムコマンド                           #
 ##############################################################################
 
 if [ "$enable_utility_commands" == true ] ; then
@@ -828,7 +824,7 @@ if [ "$enable_utility_commands" == true ] ; then
 fi
 
 ##############################################################################
-#                           Custom Process Commands                          #
+#                           プロセスのカスタムコマンド                          #
 ##############################################################################
 
 if [ "$enable_process_commands" == true ] ; then
@@ -856,7 +852,7 @@ if [ "$enable_process_commands" == true ] ; then
 fi
 
 ##############################################################################
-#                         Custom Information Commands                        #
+#                         情報表示関するカスタムコマンド                        #
 ##############################################################################
 
 if [ "$enable_information_commands" == true ] ; then
@@ -883,7 +879,7 @@ if [ "$enable_information_commands" == true ] ; then
 fi
 
 ##############################################################################
-#                           Miscellaneous Commands                           #
+#                               雑多なコマンド                                #
 ##############################################################################
 
 if [ "$enable_misc_commands" == true ] ; then
@@ -918,7 +914,7 @@ if [ "$enable_misc_commands" == true ] ; then
 fi
 
 ##############################################################################
-#                               Update Checker                               #
+#                            アップデートチェッカー                            #
 ##############################################################################
 
 # Pings my server to see if a new version has been released.  If it has, this
