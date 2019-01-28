@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VERSION=2019.01.01
-CHOICE=$(zenity --list --height="400" --width="800" --title="アイコン一括インストール ${VERSION} " --column 選択 --column アイコン --column リポジトリの追加の有無 \
+CHOICE=$(zenity --list --height="400" --width="00" --title="アイコン一括インストール ${VERSION} " --column 選択 --column アイコン --column リポジトリの追加の有無 \
 		"1" "Atom" 			"No" \
 		"2" "Adobe_Reader" 	"No"  \
 		"3" "Crossover" 	"No"  \
@@ -14,7 +14,7 @@ CHOICE=$(zenity --list --height="400" --width="800" --title="アイコン一括�
 		"10" "Team_viewer" 	"No" \
 		"11" "Tor_Browser" 	"Yes"  \
 		"12" "Peazip" 		"No" \
-		"13" "Pushbullet" 	"Yes" 	" " \
+		"13" "Pushbullet" 	"Yes" \
 		"14" "Vivaldi" 		"Yes" \
 		"15" "WPS_Office" 	"No" \
 		"16" "スペースホルダー" 		"Yes" \
