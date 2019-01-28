@@ -179,6 +179,10 @@ for word in $CHOICE; do
 	
 cd ..
 rm -vr TempDir4Icons
-cinnamon-settings themes
+
+WM=`echo $XDG_CURRENT_DESKTOP | tr '[:upper:]' '[:lower:]'`
+if [ `echo $WM|grep cinnamon` ]; then
+    cinnamon-settings themes
+fi
 
 exit 0
