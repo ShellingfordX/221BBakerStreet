@@ -21,9 +21,18 @@ CHOICE=$(zenity --list --height="400" --width="400" --title="アイコン一括�
 		"17" "スペースホルダー" 	"GetDeb" \
 		"18" "スペースホルダー" 	"No" --checklist )
 # checkboxes arent displayed if the last row is not properly set.
+case "$1" in
+        -w|--wide-system)
+                TODIR=/usr/share/theme/
+                ;;
+        *)
+                TODIR=~/.icons
+                ;;
+esac
+echo $TODIR
 
-mkdir ~/TempDir4Icons
-cd ~/TempDir4Icons
+#mkdir ~/TempDir4Icons
+#cd ~/TempDir4Icons
 
 
 IFS="|"
@@ -166,6 +175,4 @@ for word in $CHOICE; do
 		apt-get autoremove 
 	fi
 
-# Force packages installation and remove unecessary files	
-apt-get -f -y install 
-apt autoremove
+exit 0
