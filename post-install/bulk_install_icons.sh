@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# 依存関係を満たす
+if [ $(dpkg-query -W -f='${Status}' zenity 2>/dev/null | grep -c "ok installed") -eq 0 ];
+then
+	sudo apt insatll -y zenity
+fi
+if [ $(dpkg-query -W -f='${Status}' imagemagick 2>/dev/null | grep -c "ok installed") -eq 0 ];
+then
+	sudo apt insatll -y imagemagick
+fi
+
 VERSION=2019.01.01
 CHOICE=$(zenity --list --height="400" --width="400" --title="アイコン一括インストール ${VERSION} " --column 選択 --column アイコン --column リポジトリの追加の有無 \
 		True "All" 			"No" \
