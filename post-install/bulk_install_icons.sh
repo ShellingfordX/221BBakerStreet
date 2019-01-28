@@ -2,24 +2,24 @@
 
 VERSION=2019.01.01
 CHOICE=$(zenity --list --height="400" --width="400" --title="アイコン一括インストール ${VERSION} " --column 選択 --column アイコン --column リポジトリの追加の有無 \
-		"1" "All" 			"No" \
-		"2" "Numix Circle" 	"No"  \
-		"3" "Crossover" 	"No"  \
-		"4" "Franz" 		"No"  \
-		"5" "Google_Chrome" "Yes"  \
-		"6" "Megasync" 		"Yes" \
-		"7" "Opera" 		"Yes"  \
-		"8" "Skypeforlinux" "Yes"  \
-		"9" "Stremio" 		"No" \
-		"10" "Team_viewer" 	"No" \
-		"11" "Tor_Browser" 	"Yes"  \
-		"12" "Peazip" 		"No" \
-		"13" "Peazip" 		"No" \
-		"14" "Vivaldi" 		"Yes" \
-		"15" "WPS_Office" 	"No" \
-		"16" "スペースホルダー" 		"Yes" \
-		"17" "スペースホルダー" 	"GetDeb" \
-		"18" "スペースホルダー" 	"No" --checklist )
+		True "All" 			"No" \
+		True "Numix Circle" 	"No"  \
+		True "Crossover" 	"No"  \
+		True "Franz" 		"No"  \
+		True "Google_Chrome" "Yes"  \
+		True "Megasync" 		"Yes" \
+		True "Opera" 		"Yes"  \
+		True "Skypeforlinux" "Yes"  \
+		True "Stremio" 		"No" \
+		True "Team_viewer" 	"No" \
+		True "Tor_Browser" 	"Yes"  \
+		True "Peazip" 		"No" \
+		True "Peazip" 		"No" \
+		True "Vivaldi" 		"Yes" \
+		True "WPS_Office" 	"No" \
+		True "スペースホルダー" 		"Yes" \
+		True "スペースホルダー" 	"GetDeb" \
+		True "スペースホルダー" 	"No" --checklist )
 # checkboxes arent displayed if the last row is not properly set.
 case "$1" in
         -w|--wide-system)
