@@ -1,3 +1,3 @@
 
-#post-install
+# post-install
 インストール後に実行すると便利なスクリプトの保管庫
