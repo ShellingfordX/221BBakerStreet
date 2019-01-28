@@ -31,7 +31,7 @@ case "$1" in
 esac
 echo $TODIR
 
-mkdir ~/TempDir4Icons
+mkdir -p ~/TempDir4Icons
 cd ~/TempDir4Icons
 
 
@@ -175,7 +175,8 @@ for word in $CHOICE; do
 		apt-get -f install -y synergy cherrytree audacious smplayer unzip quiterss steam freeplane virtualbox thunar-dropbox-plugin htop aptitude eric glade pidgin-skypeweb kazam  | zenity --text-info --width 500 --height 400 --timeout="3"
 		apt-get autoremove 
 	fi
-
+cd ..
+rm -vr TempDir4Icons
 cinnamon-settings themes
 
 exit 0
