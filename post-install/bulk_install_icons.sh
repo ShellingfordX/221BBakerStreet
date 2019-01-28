@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CHOICE=$(zenity --list --height="400" --width="800" --title="QI QuickInstall 0.17.10.19 " --column Selected --column Apps --column Repository --column Desc \
+CHOICE=$(zenity --list --height="400" --width="800" --title="アイコン一括インストール 2019.01.01 " --column 選択 --column アイコン --column Repository --column Desc \
 		"1" "Atom" 			"No" 	"1.21.1" \
 		"2" "Adobe_Reader" 	"No" 	"9.5.3 - Better support Filling PDF forms " \
 		"3" "Crossover" 	"No" 	"16.2.5-1 - Better support Filling PDF forms " \
@@ -21,7 +21,8 @@ CHOICE=$(zenity --list --height="400" --width="800" --title="QI QuickInstall 0.1
 		"18" "Customized" 	"No" 	"" --checklist )
 # checkboxes arent displayed if the last row is not properly set.
 
-cd ~/Downloads
+mkdir ~/TempDir4Icons
+cd ~/TempDir4Icons
 
 
 IFS="|"
