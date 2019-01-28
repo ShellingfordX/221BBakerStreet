@@ -2,8 +2,8 @@
 
 VERSION=2019.01.01
 CHOICE=$(zenity --list --height="400" --width="400" --title="アイコン一括インストール ${VERSION} " --column 選択 --column アイコン --column リポジトリの追加の有無 \
-		"1" "Atom" 			"No" \
-		"2" "Adobe_Reader" 	"No"  \
+		"1" "All" 			"No" \
+		"2" "Numix Circle" 	"No"  \
 		"3" "Crossover" 	"No"  \
 		"4" "Franz" 		"No"  \
 		"5" "Google_Chrome" "Yes"  \
@@ -45,11 +45,12 @@ for word in $CHOICE; do
 		rm AdbeRdr9.5.3-1_i386linux_enu.deb
 	fi
 	
-	if [ $word = "Atom" ]
+	if [ $word = "Numix Circle" ]
 	then 
-		wget https://atom-installer.github.com/v1.21.1/atom-amd64.deb
-		dpkg -i atom-amd64.deb
-		rm atom-amd64.deb
+		wget -O numix_circle.zip https://github.com/numixproject/numix-icon-theme-circle/archive/master.zip
+		unzip numix_circle.zip
+		cd numix-icon-theme-circle-master
+		mv Numix-Circle Numix-Circle-Light $TODIR
 	fi
 	
 	if [ $word = "Crossover" ]
