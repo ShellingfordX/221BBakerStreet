@@ -176,4 +176,6 @@ for word in $CHOICE; do
 		apt-get autoremove 
 	fi
 
+cinnamon-settings themes
+
 exit 0
