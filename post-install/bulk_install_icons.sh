@@ -10,6 +10,14 @@ then
 	sudo apt insatll -y imagemagick
 fi
 
+# 作業場所
+mkdir -p ~/TempDir4Icons
+cd ~/TempDir4Icons
+
+# カタログ
+wget -O catalog.jpg https://farm5.staticflickr.com/4320/35966036651_69aab9ac05.jpg
+display catalog.jpg &
+
 VERSION=2019.01.01
 CHOICE=$(zenity --list --height="400" --width="400" --title="アイコン一括インストール ${VERSION} " --column 選択 --column アイコン --column リポジトリの追加の有無 \
 		True "All" 			"No" \
@@ -40,9 +48,6 @@ case "$1" in
                 ;;
 esac
 echo $TODIR
-
-mkdir -p ~/TempDir4Icons
-cd ~/TempDir4Icons
 
 
 IFS="|"
