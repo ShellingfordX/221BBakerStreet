@@ -19,7 +19,7 @@ wget -O catalog.jpg https://farm5.staticflickr.com/4320/35966036651_69aab9ac05.j
 display catalog.jpg &
 
 VERSION=2019.01.01
-CHOICE=$(zenity --list --height="400" --width="400" --title="アイコン一括インストール ${VERSION} " --column 選択 --column アイコン --column リポジトリの追加の有無 \
+CHOICE=$(zenity --list --height="400" --width="400" --title="アイコン一括インストーラー ${VERSION} " --column 選択 --column アイコン --column リポジトリの追加の有無 \
 		True "All" 			"No" \
 		True "Numix Circle" 	"No"  \
 		True "Crossover" 	"No"  \
