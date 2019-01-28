@@ -14,7 +14,7 @@ CHOICE=$(zenity --list --height="400" --width="00" --title="アイコン一括�
 		"10" "Team_viewer" 	"No" \
 		"11" "Tor_Browser" 	"Yes"  \
 		"12" "Peazip" 		"No" \
-		"13" "Pushbullet" 	"Yes" \
+		"13" "Peazip" 		"No" \
 		"14" "Vivaldi" 		"Yes" \
 		"15" "WPS_Office" 	"No" \
 		"16" "スペースホルダー" 		"Yes" \
