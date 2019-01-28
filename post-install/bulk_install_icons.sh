@@ -51,6 +51,7 @@ for word in $CHOICE; do
 		unzip numix_circle.zip
 		cd numix-icon-theme-circle-master
 		mv Numix-Circle Numix-Circle-Light $TODIR
+		cd ..
 	fi
 	
 	if [ $word = "Crossover" ]
@@ -175,7 +176,7 @@ for word in $CHOICE; do
 		apt-get -f install -y synergy cherrytree audacious smplayer unzip quiterss steam freeplane virtualbox thunar-dropbox-plugin htop aptitude eric glade pidgin-skypeweb kazam  | zenity --text-info --width 500 --height 400 --timeout="3"
 		apt-get autoremove 
 	fi
-cd ..
+	
 rm -vr TempDir4Icons
 cinnamon-settings themes
 
