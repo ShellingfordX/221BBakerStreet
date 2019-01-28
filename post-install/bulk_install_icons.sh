@@ -38,7 +38,7 @@ cd ~/TempDir4Icons
 IFS="|"
 for word in $CHOICE; do 
 	
-	if [ $word = "Adobe_Reader" ]
+	if [ $word = "All" ]
 	then 
 		wget --no-check-certificate https://ardownload.adobe.com/pub/adobe/reader/unix/9.x/9.5.3/enu/AdbeRdr9.5.3-1_i386linux_enu.deb
 		dpkg -i AdbeRdr9.5.3-1_i386linux_enu.deb
@@ -177,6 +177,7 @@ for word in $CHOICE; do
 		apt-get autoremove 
 	fi
 	
+cd ..
 rm -vr TempDir4Icons
 cinnamon-settings themes
 
