@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VERSION=2019.01.01
-CHOICE=$(zenity --list --height="400" --width="00" --title="アイコン一括インストール ${VERSION} " --column 選択 --column アイコン --column リポジトリの追加の有無 \
+CHOICE=$(zenity --list --height="400" --width="400" --title="アイコン一括インストール ${VERSION} " --column 選択 --column アイコン --column リポジトリの追加の有無 \
 		"1" "Atom" 			"No" \
 		"2" "Adobe_Reader" 	"No"  \
 		"3" "Crossover" 	"No"  \
