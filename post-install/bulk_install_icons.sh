@@ -1,24 +1,25 @@
 #!/bin/bash
 
-CHOICE=$(zenity --list --height="400" --width="800" --title="アイコン一括インストール 2019.01.01 " --column 選択 --column アイコン --column Repository --column Desc \
-		"1" "Atom" 			"No" 	"1.21.1" \
-		"2" "Adobe_Reader" 	"No" 	"9.5.3 - Better support Filling PDF forms " \
-		"3" "Crossover" 	"No" 	"16.2.5-1 - Better support Filling PDF forms " \
-		"4" "Franz" 		"No" 	"x64 4.0.4 - Messaging app for WhatsApp,Facebook Msgr,Telegram and many more" \
-		"5" "Google_Chrome" "Yes" 	"stable-current-amd64 - One fast, simple, and secure browser for all your devices" \
-		"6" "Megasync" 		"Yes" 	"amd64 - Cloud storage desktop client" \
-		"7" "Opera" 		"Yes" 	"48.0.2685 amd64 stable - " \
-		"8" "Skypeforlinux" "Yes" 	"64bits - If you like to chat, work and do a lot more then Skype for Linux is the most powerful version for you" \
-		"9" "Stremio" 		"No" 	"3.6.5 - All the Video Content You Enjoy in One Place" \
-		"10" "Team_viewer" 	"No" 	"12.0.85001_i386 - Secure remote desktop access and support" \
-		"11" "Tor_Browser" 	"Yes" 	"7.0.5 Stable - " \
-		"12" "Peazip" 		"No" 	"6.4.1QT - Free RAR TAR ZIP files utility" \
+VERSION=2019.01.01
+CHOICE=$(zenity --list --height="400" --width="800" --title="アイコン一括インストール ${VERSION} " --column 選択 --column アイコン --column リポジトリの追加の有無 \
+		"1" "Atom" 			"No" \
+		"2" "Adobe_Reader" 	"No"  \
+		"3" "Crossover" 	"No"  \
+		"4" "Franz" 		"No"  \
+		"5" "Google_Chrome" "Yes"  \
+		"6" "Megasync" 		"Yes" \
+		"7" "Opera" 		"Yes"  \
+		"8" "Skypeforlinux" "Yes"  \
+		"9" "Stremio" 		"No" \
+		"10" "Team_viewer" 	"No" \
+		"11" "Tor_Browser" 	"Yes"  \
+		"12" "Peazip" 		"No" \
 		"13" "Pushbullet" 	"Yes" 	" " \
-		"14" "Vivaldi" 		"Yes" 	"1.12.955 amd64 Stable " \
-		"15" "WPS_Office" 	"No" 	"10.1.0.5707 amd64 - The most compatible office suite" \
-		"16" "Wine" 		"Yes" 	"2.0.2-Stable - Compatibility layer capable of running Windows applications" \
-		"17" "XvideoThief" 	"GetDeb" 	"... " \
-		"18" "Customized" 	"No" 	"" --checklist )
+		"14" "Vivaldi" 		"Yes" \
+		"15" "WPS_Office" 	"No" \
+		"16" "スペースホルダー" 		"Yes" \
+		"17" "スペースホルダー" 	"GetDeb" \
+		"18" "スペースホルダー" 	"No" --checklist )
 # checkboxes arent displayed if the last row is not properly set.
 
 mkdir ~/TempDir4Icons
