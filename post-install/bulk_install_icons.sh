@@ -31,8 +31,8 @@ case "$1" in
 esac
 echo $TODIR
 
-#mkdir ~/TempDir4Icons
-#cd ~/TempDir4Icons
+mkdir ~/TempDir4Icons
+cd ~/TempDir4Icons
 
 
 IFS="|"
