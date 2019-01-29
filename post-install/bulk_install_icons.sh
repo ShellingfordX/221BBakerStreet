@@ -1,11 +1,12 @@
 #!/bin/bash
 
 # 定数
-VERSION=2019.01.01
-ROOT_UID=0
+readonly VERSION=2019.01.01
+readonly ROOT_UID=0
+readonly WM=`echo $XDG_CURRENT_DESKTOP | tr '[:upper:]' '[:lower:]'`
+readonly MESSAGE_DONE=" のインストールが完了しました。"
+
 TODIR=
-WM=`echo $XDG_CURRENT_DESKTOP | tr '[:upper:]' '[:lower:]'`
-MESSAGE_DONE=" のインストールが完了しました。"
 
 # 依存関係を満たす
 if [ $(dpkg-query -W -f='${Status}' zenity 2>/dev/null | grep -c "ok installed") -eq 0 ];
