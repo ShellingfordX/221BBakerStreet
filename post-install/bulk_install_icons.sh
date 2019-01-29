@@ -64,8 +64,6 @@ for word in $CHOICE; do
 		unzip numix_circle.zip
 		cd numix-icon-theme-circle-master || exit
 		mv Numix-Circle Numix-Circle-Light $TODIR
-		cd ..
-		zenity --notification --text "${word}${MESSAGE_DONE}"
 	fi
 	
 	if [ "$word" = "Flat Remix" ]
@@ -74,8 +72,6 @@ for word in $CHOICE; do
 		unzip flat-remix.zip
 		cd flat-remix-master || exit
 		mv Flat-Remix Flat-Remix-Dark Flat-Remix-Light $TODIR
-		cd ..
-		zenity --notification --text "${word}${MESSAGE_DONE}"
 	fi
 	
 	if [ $word = "Franz" ]
@@ -193,13 +189,16 @@ for word in $CHOICE; do
 		sudo apt-get update && sudo apt-get install xvst 
 		
 	fi
-	done
 
 	if [ $word = "CustomizedPackages" ]
 	then 
 		apt-get -f install -y synergy cherrytree audacious smplayer unzip quiterss steam freeplane virtualbox thunar-dropbox-plugin htop aptitude eric glade pidgin-skypeweb kazam  | zenity --text-info --width 500 --height 400 --timeout="3"
 		apt-get autoremove 
 	fi
+	
+	cd ..
+	zenity --notification --text "${word}${MESSAGE_DONE}"
+done
 	
 cd ..
 rm -vr TempDir4Icons
