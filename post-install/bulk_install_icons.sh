@@ -37,16 +37,16 @@ CHOICE=$(zenity --list --height="400" --width="400" --title="アイコン一括�
 		True "Numix Circle" 	"No"  \
 		True "Flat Remix" 	"No"  \
 		True "Franz" 		"No"  \
-		True "Franz" 		"No"  \
-		True "Google_Chrome" "Yes"  \
-		True "Megasync" 		"Yes" \
-		True "Opera" 		"Yes"  \
-		True "Skypeforlinux" "Yes"  \
+		True "A" 		"No"  \
+		True "Google_Chrome" "No"  \
+		True "Megasync" 		"No" \
+		True "Opera" 		"No"  \
+		True "Skypeforlinux" "No"  \
 		True "Stremio" 		"No" \
 		True "Team_viewer" 	"No" \
 		True "Tor_Browser" 	"Yes"  \
 		True "Peazip" 		"No" \
-		True "Peazip" 		"No" \
+		True "P" 		"No" \
 		True "Vivaldi" 		"Yes" \
 		True "WPS_Office" 	"No" \
 		True "スペースホルダー" 		"Yes" \
