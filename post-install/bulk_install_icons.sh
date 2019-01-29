@@ -26,7 +26,7 @@ mkdir -p ~/.icons
 
 # 作業場所
 mkdir -p ~/TempDir4Icons
-cd ~/TempDir4Icons
+cd ~/TempDir4Icons || exit
 
 # カタログ
 wget -O catalog.jpg https://farm5.staticflickr.com/4320/35966036651_69aab9ac05.jpg
@@ -61,7 +61,7 @@ for word in $CHOICE; do
 	then 
 		wget -O numix_circle.zip https://github.com/numixproject/numix-icon-theme-circle/archive/master.zip
 		unzip numix_circle.zip
-		cd numix-icon-theme-circle-master
+		cd numix-icon-theme-circle-master || exit
 		mv Numix-Circle Numix-Circle-Light $TODIR
 		cd ..
 		zenity --notification --text "${word}${MESSAGE_DONE}"
@@ -71,7 +71,7 @@ for word in $CHOICE; do
 	then 
 		wget -O flat-remix.zip https://github.com/daniruiz/flat-remix/archive/master.zip
 		unzip flat-remix.zip
-		cd flat-remix-master
+		cd flat-remix-master || exit
 		mv Flat-Remix Flat-Remix-Dark Flat-Remix-Light $TODIR
 		cd ..
 		zenity --notification --text "${word}${MESSAGE_DONE}"
