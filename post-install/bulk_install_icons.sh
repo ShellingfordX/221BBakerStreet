@@ -58,7 +58,7 @@ CHOICE=$(zenity --list --height="400" --width="400" --title="アイコン一括�
 IFS="|"
 for word in $CHOICE; do 
 	
-	if [ $word = "Numix Circle" ]
+	if [ "$word" = "Numix Circle" ]
 	then 
 		wget -O numix_circle.zip https://github.com/numixproject/numix-icon-theme-circle/archive/master.zip
 		unzip numix_circle.zip
@@ -68,7 +68,7 @@ for word in $CHOICE; do
 		zenity --notification --text "${word}${MESSAGE_DONE}"
 	fi
 	
-	if [ $word = "Flat Remix" ]
+	if [ "$word" = "Flat Remix" ]
 	then 
 		wget -O flat-remix.zip https://github.com/daniruiz/flat-remix/archive/master.zip
 		unzip flat-remix.zip
