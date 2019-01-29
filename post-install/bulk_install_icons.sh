@@ -1,10 +1,28 @@
 #!/bin/bash
 
+# 定数
+VERSION=2019.01.01
+ROOT_UID=0
+TODIR=
+WM=`echo $XDG_CURRENT_DESKTOP | tr '[:upper:]' '[:lower:]'`
+MESSAGE_DONE=" のインストールが完了しました。"
+
 # 依存関係を満たす
 if [ $(dpkg-query -W -f='${Status}' zenity 2>/dev/null | grep -c "ok installed") -eq 0 ];
 then
 	sudo apt insatll -y zenity
 fi
+
+# root 権限で実行すればインストール先は /usr/share/icons。そうでなければ "$HOME/.icons"
+if [ "$UID" -eq "$ROOT_UID" ]; then
+  TODIR="/usr/share/icons"
+else
+  TODIR="$HOME/.icons"
+fi
+echo $TODIR
+
+# ~/.icons なかったら作成
+mkdir -p ~/.icons
 
 # 作業場所
 mkdir -p ~/TempDir4Icons
@@ -14,11 +32,11 @@ cd ~/TempDir4Icons
 wget -O catalog.jpg https://farm5.staticflickr.com/4320/35966036651_69aab9ac05.jpg
 xviewer catalog.jpg &
 
-VERSION=2019.01.01
+
 CHOICE=$(zenity --list --height="400" --width="400" --title="アイコン一括インストーラー ${VERSION} " --column 選択 --column アイコン --column リポジトリの追加の有無 \
-		True "All" 			"No" \
 		True "Numix Circle" 	"No"  \
-		True "Crossover" 	"No"  \
+		True "Flat Remix" 	"No"  \
+		True "Franz" 		"No"  \
 		True "Franz" 		"No"  \
 		True "Google_Chrome" "Yes"  \
 		True "Megasync" 		"Yes" \
@@ -34,27 +52,10 @@ CHOICE=$(zenity --list --height="400" --width="400" --title="アイコン一括�
 		True "スペースホルダー" 		"Yes" \
 		True "スペースホルダー" 	"GetDeb" \
 		True "スペースホルダー" 	"No" --checklist )
-# checkboxes arent displayed if the last row is not properly set.
-case "$1" in
-        -w|--wide-system)
-                TODIR=/usr/share/theme/
-                ;;
-        *)
-                TODIR=~/.icons
-                ;;
-esac
-echo $TODIR
 
 
 IFS="|"
 for word in $CHOICE; do 
-	
-	if [ $word = "All" ]
-	then 
-		wget --no-check-certificate https://ardownload.adobe.com/pub/adobe/reader/unix/9.x/9.5.3/enu/AdbeRdr9.5.3-1_i386linux_enu.deb
-		dpkg -i AdbeRdr9.5.3-1_i386linux_enu.deb
-		rm AdbeRdr9.5.3-1_i386linux_enu.deb
-	fi
 	
 	if [ $word = "Numix Circle" ]
 	then 
@@ -63,13 +64,24 @@ for word in $CHOICE; do
 		cd numix-icon-theme-circle-master
 		mv Numix-Circle Numix-Circle-Light $TODIR
 		cd ..
+		zenity --notification --text "${word}${MESSAGE_DONE}"
 	fi
 	
-	if [ $word = "Crossover" ]
+	if [ $word = "Flat Remix" ]
 	then 
-		wget https://media.codeweavers.com/pub/crossover/cxlinux/demo/crossover_16.2.5-1.deb
-		dpkg -i crossover_16.2.5-1.deb
-		rm 	crossover_16.2.5-1.deb
+		wget -O flat-remix.zip https://github.com/daniruiz/flat-remix/archive/master.zip
+		unzip flat-remix.zip
+		cd flat-remix-master
+		mv Flat-Remix Flat-Remix-Dark Flat-Remix-Light $TODIR
+		cd ..
+		zenity --notification --text "${word}${MESSAGE_DONE}"
+	fi
+	
+	if [ $word = "Franz" ]
+	then 
+		wget --no-check-certificate https://github.com/meetfranz/franz-app/releases/download/4.0.4/Franz-linux-x64-4.0.4.tgz
+		tar -xvzf Franz-linux-x64-4.0.4.tgz #needs a shortcut
+		rm Franz-linux-x64-4.0.4.tgz
 	fi
 	
 	if [ $word = "Franz" ]
@@ -191,7 +203,6 @@ for word in $CHOICE; do
 cd ..
 rm -vr TempDir4Icons
 
-WM=`echo $XDG_CURRENT_DESKTOP | tr '[:upper:]' '[:lower:]'`
 if [ `echo $WM|grep cinnamon` ]; then
     cinnamon-settings themes
 fi
