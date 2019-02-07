@@ -7,7 +7,7 @@
 ```bash
 x=${addr:-value}
 ```
-と書くと、addr が空の時 value の値が $x に入る
+と書くと、$addr が空の時 value の値が $x に入る
 
 ### root 権限で実行しているか調べる
 ```bash
