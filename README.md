@@ -38,8 +38,8 @@ do
 		exit
 		;;
 		*)
-		echo "終了します。"
-		break
+		echo "何もせずに終了します。"
+		exit
 		;;
 	esac
 done
