@@ -19,3 +19,28 @@ chk_root () {
 }
 ```
 
+### ユーザーに選択させる
+```bash
+while :
+do
+	echo "選択肢 :"
+	echo "   1) 実行"
+	echo "   2) ヘルプ"
+	echo "   3) 終了"
+	read -p "上記の中から一つ数字(半角)を入力して下さい: " option
+	case $option in
+		1) 
+		echo "1"
+		exit
+		;;
+		2)
+		echo "2"
+		exit
+		;;
+		*)
+		echo "終了します。"
+		break
+		;;
+	esac
+done
+```
